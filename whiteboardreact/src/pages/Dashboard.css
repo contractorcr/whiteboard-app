@@ -1,0 +1,316 @@
+.dashboard-page {
+    --bg-from: #0b1220;
+    --bg-to: #1a2744;
+    --card: #131c33;
+    --border: #26324f;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --accent: #6366f1;
+    --accent-hover: #4f46e5;
+
+    min-height: 100vh;
+    padding: 32px 20px;
+    background: linear-gradient(160deg, var(--bg-from), var(--bg-to));
+    color: var(--text);
+    font-family: Inter, system-ui, sans-serif;
+    box-sizing: border-box;
+}
+
+.dashboard-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.dashboard-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.dashboard-logo {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: var(--accent);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.dashboard-logout {
+    padding: 8px 16px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: transparent;
+    color: var(--muted);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.dashboard-logout:hover {
+    color: var(--text);
+    border-color: var(--muted);
+}
+
+.dashboard-title-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.dashboard-title-row h1 {
+    margin: 0 0 6px;
+    font-size: 32px;
+}
+
+.dashboard-subtitle {
+    margin: 0;
+    color: var(--muted);
+}
+
+.dashboard-new {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.dashboard-new:hover {
+    background: var(--accent-hover);
+}
+
+.dashboard-error {
+    margin-bottom: 20px;
+    color: #fca5a5;
+}
+
+.dashboard-empty {
+    padding: 48px 20px;
+    border: 1px dashed var(--border);
+    border-radius: 16px;
+    text-align: center;
+    color: var(--muted);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.canvas-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--card);
+    transition: transform 0.15s, border-color 0.15s;
+}
+
+.canvas-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+}
+
+.canvas-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.canvas-card h3 {
+    margin: 0;
+    font-size: 18px;
+    word-break: break-word;
+}
+
+.canvas-badge {
+    flex-shrink: 0;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: rgba(99, 102, 241, 0.18);
+    color: #a5b4fc;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.canvas-date {
+    margin: 0 0 12px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.canvas-open {
+    margin-top: auto;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: transparent;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.canvas-open:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+.canvas-card {
+    position: relative;
+}
+
+.canvas-menu {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.canvas-menu-button {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--muted);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.canvas-menu-button:hover {
+    background: rgba(148, 163, 184, 0.15);
+    color: var(--text);
+}
+
+.canvas-menu-list {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    min-width: 150px;
+    padding: 6px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #0f172a;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.canvas-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 9px 12px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--text);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.canvas-menu-item:hover {
+    background: rgba(148, 163, 184, 0.12);
+}
+
+.canvas-menu-danger {
+    color: #f87171;
+}
+
+.canvas-menu-danger:hover {
+    background: rgba(248, 113, 113, 0.12);
+}
+/* Rename input bar */
+.modal-card input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 8px;
+    padding: 13px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    background: #0b1220;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.modal-card input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.18);
+}
+
+.modal-card input:disabled {
+    opacity: 0.6;
+}
+
+/* Align Cancel and Save consistently */
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.modal-actions button {
+    min-width: 90px;
+    padding: 10px 16px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+/* Cancel button */
+.modal-cancel {
+    background: transparent;
+    color: var(--muted);
+}
+
+.modal-cancel:hover {
+    background: rgba(148, 163, 184, 0.1);
+    color: var(--text);
+}
+
+/* Save button — same solid style as Delete */
+.modal-confirm {
+    border-color: var(--accent) !important;
+    background: var(--accent);
+    color: #fff;
+}
+
+.modal-confirm:hover {
+    border-color: var(--accent-hover) !important;
+    background: var(--accent-hover);
+}
+
+.modal-actions button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

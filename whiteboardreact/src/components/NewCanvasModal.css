@@ -1,0 +1,128 @@
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: rgba(5, 10, 20, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+}
+
+.modal-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 28px;
+    border: 1px solid #26324f;
+    border-radius: 16px;
+    background: #131c33;
+    color: #f1f5f9;
+    box-sizing: border-box;
+}
+
+.modal-card h2 {
+    margin: 0 0 6px;
+}
+
+.modal-subtitle {
+    margin: 0 0 20px;
+    color: #94a3b8;
+}
+
+.modal-card label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.modal-input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #26324f;
+    border-radius: 10px;
+    background: #0b1220;
+    color: #f1f5f9;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.modal-input:focus {
+    outline: none;
+    border-color: #6366f1;
+}
+
+.modal-input-error {
+    border-color: #f87171;
+}
+
+.modal-error {
+    margin: 10px 0 0;
+    color: #fca5a5;
+    font-size: 14px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.modal-cancel,
+.modal-create {
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.modal-cancel {
+    border: 1px solid #26324f;
+    background: transparent;
+    color: #94a3b8;
+}
+
+.modal-cancel:hover {
+    color: #f1f5f9;
+}
+
+.modal-create {
+    border: none;
+    background: #6366f1;
+    color: #fff;
+}
+
+.modal-create:hover {
+    background: #4f46e5;
+}
+
+.modal-create.is-loading {
+    opacity: 0.6;
+    cursor: wait;
+}
+.modal-delete {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #ef4444;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.modal-delete:hover {
+    background: #dc2626;
+}
+
+.modal-delete.is-loading {
+    opacity: 0.6;
+    cursor: wait;
+}
+.modal-success {
+    margin: 10px 0 0;
+    color: #86efac;
+    font-size: 14px;
+}

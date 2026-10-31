@@ -1,0 +1,43 @@
+.canvas-exit {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 220px;
+    padding: 9px 16px 9px 12px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+    color: #1e293b;
+    font: 600 14px/1 Inter, system-ui, sans-serif;
+    text-decoration: none;
+    transition: background 0.15s, border-color 0.15s, color 0.15s,
+        box-shadow 0.15s;
+}
+
+.canvas-exit:hover {
+    background: #eef2ff;
+    border-color: #6366f1;
+    color: #4f46e5;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.18);
+}
+
+.canvas-exit-icon {
+    flex-shrink: 0;
+    font-size: 18px;
+    transition: transform 0.15s;
+}
+
+.canvas-exit:hover .canvas-exit-icon {
+    transform: translateX(-3px);
+}
+
+.canvas-exit-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
